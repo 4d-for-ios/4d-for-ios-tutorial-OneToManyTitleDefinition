@@ -136,7 +136,7 @@
 				"relatedDataClass": "Projects",
 				"relatedTableNumber": 2,
 				"isToMany": true,
-				"format": "%Name%"
+				"format": ""
 			}
 		},
 		"2": {
@@ -464,7 +464,7 @@
 					"path": "tasks",
 					"label": "List of Tasks",
 					"shortLabel": "Tasks",
-					"format": "%Name%"
+					"format": ""
 				}
 			]
 		},
