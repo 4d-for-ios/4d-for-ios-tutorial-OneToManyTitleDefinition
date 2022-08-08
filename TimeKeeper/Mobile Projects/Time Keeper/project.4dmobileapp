@@ -1,0 +1,544 @@
+{
+	"info": {
+		"version": 8,
+		"target": [
+			"iOS",
+			"android"
+		],
+		"ideVersion": "1970",
+		"ideBuildVersion": "281561",
+		"componentBuild": 281561
+	},
+	"product": {
+		"name": "Time Keeper",
+		"version": "1.0",
+		"copyright": "©2022 All rights reserved",
+		"bundleIdentifier": "com.myCompany.Time-Keeper"
+	},
+	"organization": {
+		"name": "My Company",
+		"teamId": "BSE3R8CQZT",
+		"id": "com.myCompany",
+		"identifier": "com.myCompany.TimeKeeper"
+	},
+	"developer": {
+		"name": "Vanessa Talbot",
+		"id": ""
+	},
+	"server": {
+		"urls": {
+			"production": ""
+		}
+	},
+	"main": {
+		"navigationTitle": "My App",
+		"navigationType": "tabbar",
+		"order": [
+			"1",
+			"2"
+		]
+	},
+	"dataSource": {
+		"source": "local",
+		"doNotGenerateDataAtEachBuild": false,
+		"doNotExportImages": false
+	},
+	"ui": {
+		"navigationTransition": "PresentSlideSegue",
+		"dominantColor": "rgb(227,142,114)"
+	},
+	"dataModel": {
+		"1": {
+			"": {
+				"name": "Employees",
+				"label": "Employees",
+				"shortLabel": "Employees",
+				"primaryKey": "ID",
+				"embedded": true,
+				"icon": "services/Manager.svg"
+			},
+			"8": {
+				"fieldNumber": 8,
+				"name": "Email",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Email",
+				"shortLabel": "Email",
+				"valueType": "string",
+				"type": 10
+			},
+			"1": {
+				"fieldNumber": 1,
+				"name": "ID",
+				"kind": "storage",
+				"fieldType": 9,
+				"label": "ID",
+				"shortLabel": "ID",
+				"valueType": "number",
+				"type": 4
+			},
+			"3": {
+				"fieldNumber": 3,
+				"name": "Job",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Job",
+				"shortLabel": "Job",
+				"valueType": "string",
+				"type": 10
+			},
+			"2": {
+				"fieldNumber": 2,
+				"name": "Name",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Name",
+				"shortLabel": "Name",
+				"valueType": "string",
+				"type": 10
+			},
+			"6": {
+				"fieldNumber": 6,
+				"name": "PhoneNumber",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Phone Number",
+				"shortLabel": "Phone Number",
+				"valueType": "string",
+				"type": 10
+			},
+			"5": {
+				"fieldNumber": 5,
+				"name": "Picture",
+				"kind": "storage",
+				"fieldType": 3,
+				"label": "Picture",
+				"shortLabel": "Picture",
+				"valueType": "image",
+				"type": 12
+			},
+			"4": {
+				"fieldNumber": 4,
+				"name": "ProjectID",
+				"kind": "storage",
+				"fieldType": 9,
+				"label": "Project id",
+				"shortLabel": "Project id",
+				"valueType": "number",
+				"type": 4
+			},
+			"tasks": {
+				"kind": "relatedEntities",
+				"label": "List of Tasks",
+				"shortLabel": "Tasks",
+				"relatedEntities": "Projects",
+				"inverseName": "employee",
+				"relatedDataClass": "Projects",
+				"relatedTableNumber": 2,
+				"isToMany": true,
+				"format": "%Name%"
+			}
+		},
+		"2": {
+			"": {
+				"name": "Projects",
+				"label": "Projects",
+				"shortLabel": "Projects",
+				"primaryKey": "ID",
+				"embedded": true
+			},
+			"3": {
+				"fieldNumber": 3,
+				"name": "Category",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Category",
+				"shortLabel": "Category",
+				"valueType": "string",
+				"type": 10
+			},
+			"4": {
+				"fieldNumber": 4,
+				"name": "Color",
+				"kind": "storage",
+				"fieldType": 8,
+				"label": "Color",
+				"shortLabel": "Color",
+				"valueType": "number",
+				"type": 3
+			},
+			"13": {
+				"fieldNumber": 13,
+				"name": "Completion",
+				"kind": "storage",
+				"fieldType": 1,
+				"label": "Completion",
+				"shortLabel": "Completion",
+				"valueType": "number",
+				"type": 6,
+				"format": "integer"
+			},
+			"5": {
+				"fieldNumber": 5,
+				"name": "DefaultHourlyRate",
+				"kind": "storage",
+				"fieldType": 1,
+				"label": "Default Hourly Rate",
+				"shortLabel": "Default Hourly Rate",
+				"valueType": "number",
+				"type": 6,
+				"format": "currencyDollar"
+			},
+			"employee": {
+				"kind": "relatedEntity",
+				"label": "Employee",
+				"shortLabel": "Employee",
+				"relatedDataClass": "Employees",
+				"inverseName": "tasks",
+				"relatedTableNumber": 1,
+				"1": {
+					"name": "ID",
+					"kind": "storage",
+					"fieldType": 9,
+					"label": "ID",
+					"shortLabel": "ID",
+					"valueType": "number",
+					"type": 4,
+					"path": "ID",
+					"fieldNumber": 1
+				},
+				"2": {
+					"name": "Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"label": "Name",
+					"shortLabel": "Name",
+					"valueType": "string",
+					"type": 10,
+					"path": "Name",
+					"fieldNumber": 2
+				},
+				"3": {
+					"name": "Job",
+					"kind": "storage",
+					"fieldType": 0,
+					"label": "Job",
+					"shortLabel": "Job",
+					"valueType": "string",
+					"type": 10,
+					"path": "Job",
+					"fieldNumber": 3
+				},
+				"4": {
+					"name": "ProjectID",
+					"kind": "storage",
+					"fieldType": 9,
+					"label": "Project id",
+					"shortLabel": "Project id",
+					"valueType": "number",
+					"type": 4,
+					"path": "ProjectID",
+					"fieldNumber": 4
+				},
+				"5": {
+					"name": "Picture",
+					"kind": "storage",
+					"fieldType": 3,
+					"label": "Picture",
+					"shortLabel": "Picture",
+					"valueType": "image",
+					"type": 12,
+					"path": "Picture",
+					"fieldNumber": 5
+				},
+				"6": {
+					"name": "PhoneNumber",
+					"kind": "storage",
+					"fieldType": 0,
+					"label": "Phone Number",
+					"shortLabel": "Phone Number",
+					"valueType": "string",
+					"type": 10,
+					"path": "PhoneNumber",
+					"fieldNumber": 6
+				},
+				"8": {
+					"name": "Email",
+					"kind": "storage",
+					"fieldType": 0,
+					"label": "Email",
+					"shortLabel": "Email",
+					"valueType": "string",
+					"type": 10,
+					"path": "Email",
+					"fieldNumber": 8
+				},
+				"tasks": {
+					"kind": "relatedEntities",
+					"label": "List of tasks",
+					"shortLabel": "Tasks",
+					"relatedEntities": "Projects",
+					"inverseName": "employee",
+					"relatedDataClass": "Projects",
+					"relatedTableNumber": 2,
+					"isToMany": true,
+					"path": "employee.tasks",
+					"fieldNumber": 0,
+					"format": ""
+				}
+			},
+			"11": {
+				"fieldNumber": 11,
+				"name": "EmployeeID",
+				"kind": "storage",
+				"fieldType": 9,
+				"label": "Employee id",
+				"shortLabel": "Employee id",
+				"valueType": "number",
+				"type": 4
+			},
+			"1": {
+				"fieldNumber": 1,
+				"name": "ID",
+				"kind": "storage",
+				"fieldType": 9,
+				"label": "ID",
+				"shortLabel": "ID",
+				"valueType": "number",
+				"type": 4
+			},
+			"2": {
+				"fieldNumber": 2,
+				"name": "Name",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Name",
+				"shortLabel": "Name",
+				"valueType": "string",
+				"type": 10
+			},
+			"9": {
+				"fieldNumber": 9,
+				"name": "Time",
+				"kind": "storage",
+				"fieldType": 11,
+				"label": "Time",
+				"shortLabel": "Time",
+				"valueType": "number",
+				"type": 9,
+				"format": "duration"
+			}
+		}
+	},
+	"list": {
+		"1": {
+			"form": "Profile",
+			"fields": [
+				{
+					"fieldNumber": 5,
+					"name": "Picture",
+					"kind": "storage",
+					"fieldType": 3,
+					"path": "Picture"
+				},
+				{
+					"fieldNumber": 2,
+					"name": "Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Name"
+				},
+				{
+					"fieldNumber": 3,
+					"name": "Job",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Job"
+				},
+				null,
+				null
+			],
+			"searchableField": [
+				{
+					"fieldNumber": 2,
+					"name": "Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Name"
+				},
+				{
+					"fieldNumber": 3,
+					"name": "Job",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Job"
+				}
+			]
+		},
+		"2": {
+			"form": "Tasks",
+			"fields": [
+				{
+					"fieldNumber": 2,
+					"name": "Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Name"
+				},
+				{
+					"fieldNumber": 3,
+					"name": "Category",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Category"
+				},
+				{
+					"fieldNumber": 9,
+					"name": "Time",
+					"kind": "storage",
+					"fieldType": 11,
+					"path": "Time",
+					"label": "Time",
+					"shortLabel": "Time",
+					"format": "duration"
+				},
+				{
+					"fieldNumber": 13,
+					"name": "Completion",
+					"kind": "storage",
+					"fieldType": 1,
+					"format": "integer",
+					"path": "Completion"
+				},
+				null,
+				null
+			]
+		}
+	},
+	"detail": {
+		"1": {
+			"form": "Left Cut Header",
+			"fields": [
+				{
+					"fieldNumber": 5,
+					"name": "Picture",
+					"kind": "storage",
+					"fieldType": 3,
+					"path": "Picture"
+				},
+				{
+					"fieldNumber": 2,
+					"name": "Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Name"
+				},
+				{
+					"fieldNumber": 3,
+					"name": "Job",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Job"
+				},
+				{
+					"fieldNumber": 8,
+					"name": "Email",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Email"
+				},
+				{
+					"fieldNumber": 6,
+					"name": "PhoneNumber",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "PhoneNumber"
+				},
+				{
+					"kind": "relatedEntities",
+					"inverseName": "employee",
+					"relatedDataClass": "Projects",
+					"relatedTableNumber": 2,
+					"isToMany": true,
+					"name": "tasks",
+					"path": "tasks",
+					"label": "List of Tasks",
+					"shortLabel": "Tasks",
+					"format": "%Name%"
+				}
+			]
+		},
+		"2": {
+			"form": "Tasks Plus",
+			"fields": [
+				{
+					"fieldNumber": 2,
+					"name": "Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Name"
+				},
+				null,
+				{
+					"fieldNumber": 13,
+					"name": "Completion",
+					"kind": "storage",
+					"fieldType": 1,
+					"format": "integer",
+					"path": "Completion"
+				},
+				{
+					"fieldNumber": 9,
+					"name": "Time",
+					"kind": "storage",
+					"fieldType": 11,
+					"format": "duration",
+					"path": "Time"
+				},
+				{
+					"fieldNumber": 4,
+					"name": "Color",
+					"kind": "storage",
+					"fieldType": 8,
+					"path": "Color"
+				},
+				{
+					"fieldNumber": 5,
+					"name": "DefaultHourlyRate",
+					"kind": "storage",
+					"fieldType": 1,
+					"format": "currencyDollar",
+					"path": "DefaultHourlyRate"
+				},
+				{
+					"fieldNumber": 3,
+					"name": "Category",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Category"
+				},
+				{
+					"name": "employee.Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "employee.Name",
+					"fieldNumber": 2
+				},
+				{
+					"name": "employee.Email",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "employee.Email",
+					"fieldNumber": 8
+				},
+				{
+					"name": "employee.PhoneNumber",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "employee.PhoneNumber",
+					"fieldNumber": 6
+				}
+			]
+		}
+	}
+}
